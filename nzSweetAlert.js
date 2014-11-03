@@ -9,20 +9,19 @@ module.factory('nzSwal', ['nzSweetAlertDefaults', '$q',
             return;
         }
 
-        return function(p1, p2, p3) {
+        return service;
+
+        function service(p1, p2, p3) {
 
             var deferred = $q.defer();
 
-            var params;
+            var params = angular.copy(nzSweetAlertDefaults);
 
             if (typeof p1 !== 'object') {
-                params = {
-                    title: p1 ? p1 : '',
-                    text: p2 ? p2 : '',
-                    type: p3 ? p3 : null,
-                };
+                params.title = p1 ? p1 : '';
+                params.text = p2 ? p2 : '';
+                params.type = p3 ? p3 : null;
             } else {
-                params = nzSweetAlertDefaults;
                 params = angular.extend(params, p1);
             }
 
@@ -35,6 +34,6 @@ module.factory('nzSwal', ['nzSweetAlertDefaults', '$q',
             });
 
             return deferred.promise;
-        };
+        }
     }
 ]);
