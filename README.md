@@ -1,4 +1,5 @@
-# A super lightweight, "promising" Angular wrapper for [SweetAlert](http://tristanedwards.me/sweetalert), a beautiful replacement for Javascript's "Alert".
+# nzSweetAlert
+A super lightweight, "promising" Angular wrapper for [SweetAlert](http://tristanedwards.me/sweetalert), a beautiful replacement for Javascript's "Alert".
 
 ## Install
 1. `bower install nzSweetAlert`
