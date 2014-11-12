@@ -1,7 +1,7 @@
 var module = angular.module('nzSweetAlert', []);
 
 module.factory('nzSwal', ['$q',
-    function(nzSweetAlertDefaults, $q) {
+    function($q) {
         if (!window.swal) {
             console.log('Sweet Alert is not loaded!');
             return;
