@@ -1,8 +1,6 @@
 var module = angular.module('nzSweetAlert', []);
 
-module.value('nzSweetAlertDefaults', {});
-
-module.factory('nzSwal', ['nzSweetAlertDefaults', '$q',
+module.factory('nzSwal', ['$q',
     function(nzSweetAlertDefaults, $q) {
         if (!window.swal) {
             console.log('Sweet Alert is not loaded!');
@@ -15,14 +13,16 @@ module.factory('nzSwal', ['nzSweetAlertDefaults', '$q',
 
             var deferred = $q.defer();
 
-            var params = angular.copy(nzSweetAlertDefaults);
+            var params;
 
             if (typeof p1 !== 'object') {
-                params.title = p1 ? p1 : '';
-                params.text = p2 ? p2 : '';
-                params.type = p3 ? p3 : null;
+                params = {
+                    title: p1 ? p1 : '',
+                    text: p2 ? p2 : '',
+                    type: p3 ? p3 : null,
+                };
             } else {
-                params = angular.extend(params, p1);
+                params = p1;
             }
 
             swal(params, function(isConfirm) {
