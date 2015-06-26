@@ -11,7 +11,7 @@ module.factory('nzSwal', ['$q',
 
         function service(p1, p2, p3) {
 
-            var deferred = $q.defer();
+            var d = $q.defer();
 
             var params;
 
@@ -27,13 +27,13 @@ module.factory('nzSwal', ['$q',
 
             swal(params, function(isConfirm) {
                 if (isConfirm) {
-                    deferred.resolve();
+                    d.resolve();
                 } else {
-                    deferred.reject();
+                    d.reject();
                 }
             });
 
-            return deferred.promise;
+            return d.promise;
         }
     }
 ]);

@@ -1,0 +1,19 @@
+{
+  "name": "nz-sweet-alert",
+  "version": "1.0.0",
+  "description": "A super lightweight, \"promising\" Angular wrapper for [SweetAlert](http://tristanedwards.me/sweetalert), a beautiful replacement for Javascript's \"Alert\".",
+  "main": "nzSweetAlert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nozzle/nzSweetAlert.git"
+  },
+  "author": "Tanner Linsley <tannerlinsley@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nozzle/nzSweetAlert/issues"
+  },
+  "homepage": "https://github.com/nozzle/nzSweetAlert"
+}
